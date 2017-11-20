@@ -11,5 +11,12 @@
         <h1>Halloj i skogen</h1>
 
         <img src="https://images.cdn.yle.fi/image/upload/c_limit,f_auto,q_80,w_580,h_580/14-svyle-70624531973532612e.jpg">
+
+        <h2>Karelens djur</h2>
+        <ul>
+            <li>Örn</li>
+            <li>Älg</li>
+            <li>Björn</li>
+        </ul>
     </body>
 </html>
