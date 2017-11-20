@@ -17,6 +17,8 @@
             <li>Örn</li>
             <li>Älg</li>
             <li>Björn</li>
+            <li>Lodjur</li>
+            <li>Rådjur</li>
         </ul>
     </body>
 </html>
