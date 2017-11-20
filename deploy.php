@@ -4,7 +4,7 @@ namespace Deployer;
 require 'recipe/common.php';
 
 // Project name
-set('application', 'my_project');
+set('application', 'skogen');
 
 // Project repository
 set('repository', 'git@github.com:frejah/skogen.git');
@@ -22,13 +22,20 @@ set('allow_anonymous_stats', false);
 
 // Hosts
 
-host('project.com')
-    ->set('deploy_path', '~/{{application}}');    
+host('ssh.binero.se')
+    ->set('deploy_path', '~/skogen.frejahillstrom.chas.academy')
+    ->user('226729_freja')
+    ->port(22);
     
 
 // Tasks
 
 desc('Deploy your project');
+
+task( 'deploy:custom_webroot', function() {
+    run("cd {{deploy_path}} && ln -sfn {{release_path}} public_html/web");
+});
+
 task('deploy', [
     'deploy:info',
     'deploy:prepare',
@@ -37,7 +44,6 @@ task('deploy', [
     'deploy:update_code',
     'deploy:shared',
     'deploy:writable',
-    'deploy:vendors',
     'deploy:clear_paths',
     'deploy:symlink',
     'deploy:unlock',
@@ -47,3 +53,4 @@ task('deploy', [
 
 // [Optional] If deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
+after('deploy', 'deploy:custom_webroot');
