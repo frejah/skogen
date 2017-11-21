@@ -1,6 +1,6 @@
 <?php
 
-class Simple
+class simple
 {
     //Property declaration.
 
