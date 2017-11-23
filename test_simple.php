@@ -2,11 +2,11 @@
 //Get general settings
 require "config.php";
 
-//Get the class file for simple
-require "simple.php";
+//Get the class file for Simple
+require "Simple.php";
 
 //Create an object of the class
-$obj = new simple();
+$obj = new Simple();
 
 //Use the class
 echo "<p>";

@@ -1,13 +1,8 @@
 <?php
-require "simple.php";
-require "config.php";
+//require "Simple.php";
+//require "config.php";
 require "test_simple.php";
-
-
-
-
-
-
+require "test_dice1.php";
 
 
 
@@ -15,7 +10,7 @@ require "test_simple.php";
 
 ?>
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">

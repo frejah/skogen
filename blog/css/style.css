@@ -1,0 +1,46 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    width: 800px;
+}
+
+.mainMenu {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+
+    list-style-type:none;
+}
+
+.mainContent {
+    display: flex;
+    flex-flow: column;
+    flex: 3;
+    
+    border: 1px dotted black;
+}
+
+.frejaPost {
+    color: #FFCCFF;
+    background-color: #19ACE1;
+}
+
+.magnusPost {
+    color: rgb(80, 6, 80);
+}
+
+.magnusPost > h1 {
+    color: rgb(80, 6, 80);
+    font-size: 72px;
+}
+
+.leifPost {
+    color: rgb(22, 143, 107);
+}
