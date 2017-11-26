@@ -1,0 +1,10 @@
+{
+    "djur": {
+        "controller": "Djur",
+        "method": "getAll"
+    },
+    "omoss": {
+        "controller": "About",
+        "method": "getAll"
+    }
+}

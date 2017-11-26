@@ -10,14 +10,13 @@
 
     require_once("./src/MainMenu.php");
 
-    
-    $blogPostView = new BlogPostViewAdvanced();
-    $blogPostView->setCssClass("frejaPost");
-    
     $factory = new BlogPostContainerFactory();
 
     $blogPostContainer = $factory->createContainer();
     $blogPostContainerView = new BlogPostContainerView($blogPostContainer);
+
+    $blogPostView = new BlogPostViewAdvanced();
+    $blogPostView->setCssClass("frejaPost");
 
     $menuItem1 = new MainMenuItem("Hem", "index.php");
     $menuItem2 = new MainMenuItem("Om Skogen", "omskogen.php");
@@ -25,16 +24,12 @@
     $menuItem4 = new MainMenuItem("Leif i Skogen", "leif.php");
     $menuItem5 = new MainMenuItem("Kontakt", "kontakt.php");
 
-    $menuDivider =new MainMenuDivider();
-
     $mainMenu = new MainMenu();
     $mainMenu->addItem($menuItem1);
     $mainMenu->addItem($menuItem2);
     $mainMenu->addItem($menuItem3);
     $mainMenu->addItem($menuItem4);
     $mainMenu->addItem($menuItem5);
-    $mainMenu->addItem($menuDivider);
-    $mainMenu->createMenuItemsFromBlogPosts($blogPostContainer);
 ?>
 
 <!DOCTYPE html>
