@@ -1,6 +1,6 @@
 <?php
-    require_once("./src/common.php");
-
+    namespace Djur;
+    
     class Header {
         function __construct() {
         }

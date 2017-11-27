@@ -1,21 +1,23 @@
 <?php
 
-class Config {
+    namespace Djur\Utils;
 
-    private $data;
+    class Config {
 
-    public function __construct() {
-        $json = file_get_contents(__DIR__ . "../../../config/app.json");
-        $this->data = json_decode($json, true);
-    }
+        private $data;
 
-    public function get(string $key) {
-        if(!isset($this->data[$key])) {
-            throw new Exception("Key not found: " . $key);
+        public function __construct() {
+            $json = file_get_contents(__DIR__ . "/../../config/app.json");
+            $this->data = json_decode($json, true);
         }
-        
-        return $this->data[$key];
+
+        public function get(string $key) {
+            if(!isset($this->data[$key])) {
+                throw new Exception("Key not found: " . $key);
+            }
+            
+            return $this->data[$key];
+        }
     }
-}
 
 ?>

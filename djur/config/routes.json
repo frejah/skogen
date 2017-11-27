@@ -1,10 +1,17 @@
 {
+    "djur/:name":  {
+        "controller": "SingleAnimalBox",
+        "method": "render",
+        "params": {
+            "name": "string"
+        }
+    },
     "djur": {
-        "controller": "Djur",
-        "method": "getAll"
+        "controller": "AllAnimalBoxes",
+        "method": "render"
     },
     "omoss": {
         "controller": "About",
-        "method": "getAll"
+        "method": "show"
     }
 }

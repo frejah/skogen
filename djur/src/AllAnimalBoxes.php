@@ -1,6 +1,5 @@
 <?php
-    require_once("common.php");
-    require_once("AnimalPost.php");
+    namespace Djur;
 
     class AllAnimalBoxes {
         private $harePost;

@@ -1,6 +1,7 @@
 <?php
-    require_once("../src/common.php");
-    require_once("../src/Utils/Config.php");
+    require_once("../common.php");
+    
+    use Djur\Utils\Config;
 
     echo "<hr><h2>Config</h2>";
     

@@ -1,5 +1,5 @@
 <?php
-    require_once("./src/common.php");
+    namespace Djur;
 
     class Footer {
         function __construct() {

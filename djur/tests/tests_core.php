@@ -1,9 +1,9 @@
 <?php
-    require_once("../src/common.php");
+    require_once("../common.php");
 
-    require_once("../src/Core/Request.php");
-    require_once("../src/Core/FilteredMap.php");
-    require_once("../src/Core/Router.php");
+    use Djur\Core\Request;
+    use Djur\Core\FilteredMap;
+    use Djur\Core\Router;
 
     echo "<h2>Request</h2>";
 
@@ -41,7 +41,14 @@
 
     $router = new Router();
     var_dump($router->route());
-    
+
+    var_dump($router->extractParams("djur/:name", "/djur/hare"));
+    var_dump($router->executeController(
+        "",
+        "",
+        ["controller" => "AllAnimalBoxes", "method" => "render"],
+        new Request()
+    ));
 
     echo "<hr><br>";
 

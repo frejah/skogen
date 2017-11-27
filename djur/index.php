@@ -1,8 +1,11 @@
 <?php
-    require_once("./src/common.php");
-    require_once("./src/Header.php");
-    require_once("./src/Menu.php");
-    require_once("./src/AllAnimalBoxes.php");  
+    require_once(__DIR__ . "/common.php");
+
+    use Djur\Header;
+    use Djur\Menu;
+    use Djur\AllAnimalBoxes;
+    use Djur\Footer;
+
     require_once("./src/Footer.php");
 
     $header = new Header();

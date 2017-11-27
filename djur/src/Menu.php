@@ -1,11 +1,10 @@
 <?php
-    require_once("./src/common.php");
+    namespace Djur;
 
     class Menu {
         function __construct() {
         }
 
-        
         function render() {
             echo "<div>";
 
