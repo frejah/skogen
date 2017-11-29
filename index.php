@@ -5,7 +5,7 @@
 // require "test_simple.php";
 // require "test_dice1.php";
 
-
+phpinfo();
 
 
 
